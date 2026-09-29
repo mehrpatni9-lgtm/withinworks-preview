@@ -1,0 +1,317 @@
+<title>WithinWorks Logo Routes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500&display=swap">
+<style>
+  :root{
+    --bg:#faf8f5; --surface:#f2ede6; --sage:#8a9a8b; --sage-deep:#5d6e5e;
+    --clay:#b08d6f; --clay-deep:#8d6c50; --forest:#2f3a32;
+    --text:#3d3a35; --text-light:#5c574f; --text-faint:#7d766a;
+    --rule:rgba(61,58,53,.13); --rule-soft:rgba(61,58,53,.07);
+    --serif:'Fraunces',Georgia,serif; --sans:'Jost','Helvetica Neue',Arial,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --bg:#1e211e; --surface:#272b27; --sage:#9dae9e; --sage-deep:#adbcae;
+    --clay:#c9a685; --clay-deep:#d9bb9e; --forest:#e9e6df;
+    --text:#e9e6df; --text-light:#c0bbb1; --text-faint:#968f85;
+    --rule:rgba(233,230,223,.16); --rule-soft:rgba(233,230,223,.08);
+  }}
+  :root[data-theme="dark"]{
+    --bg:#1e211e; --surface:#272b27; --sage:#9dae9e; --sage-deep:#adbcae;
+    --clay:#c9a685; --clay-deep:#d9bb9e; --forest:#e9e6df;
+    --text:#e9e6df; --text-light:#c0bbb1; --text-faint:#968f85;
+    --rule:rgba(233,230,223,.16); --rule-soft:rgba(233,230,223,.08);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.6}
+  .wrap{max-width:70rem;margin:0 auto;padding-inline:1.5rem;padding-block:3.5rem 5rem}
+  h1,h2{font-family:var(--serif);font-weight:500;margin:0;line-height:1.15;text-wrap:balance}
+  h1{font-size:clamp(2rem,4.5vw,2.9rem)}
+  .kicker{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-deep);margin:0 0 .9rem}
+  .lede{color:var(--text-light);max-width:38rem;margin:1.1rem 0 0}
+  .lede em{font-family:var(--serif);font-style:italic}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:3rem}
+  .card{background:var(--surface);border:1px solid var(--rule-soft);border-radius:4px;padding:1.75rem 1.6rem 1.5rem}
+  .card-top{display:flex;align-items:baseline;gap:.75rem;margin-bottom:1.25rem}
+  .num{font-family:var(--serif);font-size:.8rem;color:var(--clay-deep);letter-spacing:.08em}
+  .card h2{font-size:1.3rem}
+
+  .mark{stroke:var(--sage-deep);stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round;display:block}
+  .mark .fill{fill:var(--sage-deep);stroke:none}
+  .mark .thin{stroke-width:1.4}
+
+  .stage{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;
+    background:var(--bg);border-radius:3px;padding:1.6rem 1.4rem}
+  .lg{width:118px;height:118px}
+  .scale{display:flex;align-items:flex-end;gap:.7rem}
+  .sm{width:48px;height:48px}
+  .xs{width:20px;height:20px;stroke-width:4}
+  .scale-note{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap}
+
+  .lockups{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;
+    margin-top:1rem;padding:1.1rem 1.2rem;background:var(--bg);border-radius:3px}
+  .lock-h{display:flex;align-items:center;gap:.7rem}
+  .lock-h .mark{width:38px;height:38px}
+  .lock-v{display:flex;flex-direction:column;align-items:center;gap:.4rem;
+    padding-left:1.2rem;border-left:1px solid var(--rule-soft)}
+  .lock-v .mark{width:30px;height:30px}
+  .wm{display:flex;flex-direction:column;line-height:1.05}
+  .wm b{font-family:var(--serif);font-weight:500;font-size:1.02rem;letter-spacing:-.005em}
+  .wm i{font-style:normal;font-size:.53rem;letter-spacing:.24em;text-transform:uppercase;color:var(--sage-deep)}
+  .lock-v .wm{align-items:center}
+
+  .ways{display:flex;gap:.5rem;margin-top:.8rem}
+  .way{flex:1;display:flex;align-items:center;justify-content:center;
+    padding:.8rem 0;border-radius:3px;background:var(--bg)}
+  .way .mark{width:30px;height:30px}
+  .w-sage .mark{stroke:var(--sage-deep)} .w-sage .fill{fill:var(--sage-deep)}
+  .w-clay .mark{stroke:var(--clay)} .w-clay .fill{fill:var(--clay)}
+  .w-ink .mark{stroke:var(--text)} .w-ink .fill{fill:var(--text)}
+  .w-rev{background:var(--forest)}
+  .w-rev .mark{stroke:#faf8f5} .w-rev .fill{fill:#faf8f5}
+
+  .idea{margin:1.2rem 0 .5rem;font-size:.92rem;color:var(--text-light)}
+  .note{margin:0;font-family:var(--serif);font-style:italic;font-size:.86rem;color:var(--clay-deep)}
+
+  footer{margin-top:3rem;padding-top:1.3rem;border-top:1px solid var(--rule);
+    font-size:.84rem;color:var(--text-faint);max-width:40rem}
+
+  @media (max-width:52rem){
+    .grid{grid-template-columns:1fr}
+    .lockups{grid-template-columns:1fr}
+    .lock-v{padding-left:0;border-left:0;border-top:1px solid var(--rule-soft);padding-top:1rem}
+  }
+  @media (max-width:26rem){
+    .stage{flex-direction:column;align-items:flex-start;gap:1.2rem}
+  }
+</style>
+
+<div class="wrap">
+  <p class="kicker">WithinWorks Leadership</p>
+  <h1>Six routes for the mark</h1>
+  <p class="lede">Drawn rather than generated. Each one is shown large, at 48px and 20px to prove it survives shrinking, in both lockups, and in four colourways. Pick a <em>direction</em>, not a finished thing.</p>
+
+  <div class="grid">
+    <article class="card">
+      <div class="card-top">
+        <span class="num">01</span>
+        <h2>The Lens</h2>
+      </div>
+
+      <div class="stage">
+        <svg class="mark lg" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="37"/><path d="M65.00 50.00 L57.50 62.99 L68.50 82.04" /><path d="M57.50 62.99 L42.50 62.99 L31.50 82.04" /><path d="M42.50 62.99 L35.00 50.00 L13.00 50.00" /><path d="M35.00 50.00 L42.50 37.01 L31.50 17.96" /><path d="M42.50 37.01 L57.50 37.01 L68.50 17.96" /><path d="M57.50 37.01 L65.00 50.00 L87.00 50.00" /></svg>
+        <div class="scale">
+          <svg class="mark sm" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="37"/><path d="M65.00 50.00 L57.50 62.99 L68.50 82.04" /><path d="M57.50 62.99 L42.50 62.99 L31.50 82.04" /><path d="M42.50 62.99 L35.00 50.00 L13.00 50.00" /><path d="M35.00 50.00 L42.50 37.01 L31.50 17.96" /><path d="M42.50 37.01 L57.50 37.01 L68.50 17.96" /><path d="M57.50 37.01 L65.00 50.00 L87.00 50.00" /></svg>
+          <svg class="mark xs" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="37"/><path d="M65.00 50.00 L57.50 62.99 L68.50 82.04" /><path d="M57.50 62.99 L42.50 62.99 L31.50 82.04" /><path d="M42.50 62.99 L35.00 50.00 L13.00 50.00" /><path d="M35.00 50.00 L42.50 37.01 L31.50 17.96" /><path d="M42.50 37.01 L57.50 37.01 L68.50 17.96" /><path d="M57.50 37.01 L65.00 50.00 L87.00 50.00" /></svg>
+          <span class="scale-note">48px &middot; 20px</span>
+        </div>
+      </div>
+
+      <div class="lockups">
+        <div class="lock lock-h">
+          <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="37"/><path d="M65.00 50.00 L57.50 62.99 L68.50 82.04" /><path d="M57.50 62.99 L42.50 62.99 L31.50 82.04" /><path d="M42.50 62.99 L35.00 50.00 L13.00 50.00" /><path d="M35.00 50.00 L42.50 37.01 L31.50 17.96" /><path d="M42.50 37.01 L57.50 37.01 L68.50 17.96" /><path d="M57.50 37.01 L65.00 50.00 L87.00 50.00" /></svg>
+          <span class="wm"><b>WithinWorks</b><i>Leadership</i></span>
+        </div>
+        <div class="lock lock-v">
+          <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="37"/><path d="M65.00 50.00 L57.50 62.99 L68.50 82.04" /><path d="M57.50 62.99 L42.50 62.99 L31.50 82.04" /><path d="M42.50 62.99 L35.00 50.00 L13.00 50.00" /><path d="M35.00 50.00 L42.50 37.01 L31.50 17.96" /><path d="M42.50 37.01 L57.50 37.01 L68.50 17.96" /><path d="M57.50 37.01 L65.00 50.00 L87.00 50.00" /></svg>
+          <span class="wm"><b>WithinWorks</b><i>Leadership</i></span>
+        </div>
+      </div>
+
+      <div class="ways">
+        <span class="way w-sage"><svg class="mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="37"/><path d="M65.00 50.00 L57.50 62.99 L68.50 82.04" /><path d="M57.50 62.99 L42.50 62.99 L31.50 82.04" /><path d="M42.50 62.99 L35.00 50.00 L13.00 50.00" /><path d="M35.00 50.00 L42.50 37.01 L31.50 17.96" /><path d="M42.50 37.01 L57.50 37.01 L68.50 17.96" /><path d="M57.50 37.01 L65.00 50.00 L87.00 50.00" /></svg></span>
+        <span class="way w-clay"><svg class="mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="37"/><path d="M65.00 50.00 L57.50 62.99 L68.50 82.04" /><path d="M57.50 62.99 L42.50 62.99 L31.50 82.04" /><path d="M42.50 62.99 L35.00 50.00 L13.00 50.00" /><path d="M35.00 50.00 L42.50 37.01 L31.50 17.96" /><path d="M42.50 37.01 L57.50 37.01 L68.50 17.96" /><path d="M57.50 37.01 L65.00 50.00 L87.00 50.00" /></svg></span>
+        <span class="way w-ink"><svg class="mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="37"/><path d="M65.00 50.00 L57.50 62.99 L68.50 82.04" /><path d="M57.50 62.99 L42.50 62.99 L31.50 82.04" /><path d="M42.50 62.99 L35.00 50.00 L13.00 50.00" /><path d="M35.00 50.00 L42.50 37.01 L31.50 17.96" /><path d="M42.50 37.01 L57.50 37.01 L68.50 17.96" /><path d="M57.50 37.01 L65.00 50.00 L87.00 50.00" /></svg></span>
+        <span class="way w-rev"><svg class="mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="37"/><path d="M65.00 50.00 L57.50 62.99 L68.50 82.04" /><path d="M57.50 62.99 L42.50 62.99 L31.50 82.04" /><path d="M42.50 62.99 L35.00 50.00 L13.00 50.00" /><path d="M35.00 50.00 L42.50 37.01 L31.50 17.96" /><path d="M42.50 37.01 L57.50 37.01 L68.50 17.96" /><path d="M57.50 37.01 L65.00 50.00 L87.00 50.00" /></svg></span>
+      </div>
+
+      <p class="idea">Her brief says transformation comes from changing the internal lens. This is that, literally. An aperture, open at the centre.</p>
+      <p class="note">Most ownable idea. Reads as precision and focus, not wellness.</p>
+    </article>
+    <article class="card">
+      <div class="card-top">
+        <span class="num">02</span>
+        <h2>The Threshold</h2>
+      </div>
+
+      <div class="stage">
+        <svg class="mark lg" viewBox="0 0 100 100" aria-hidden="true"><path d="M22 82 L22 46 A28 28 0 0 1 78 46 L78 82"/><path d="M38 82 L38 50 A12 12 0 0 1 62 50 L62 82"/><path d="M22 82 L78 82"/></svg>
+        <div class="scale">
+          <svg class="mark sm" viewBox="0 0 100 100" aria-hidden="true"><path d="M22 82 L22 46 A28 28 0 0 1 78 46 L78 82"/><path d="M38 82 L38 50 A12 12 0 0 1 62 50 L62 82"/><path d="M22 82 L78 82"/></svg>
+          <svg class="mark xs" viewBox="0 0 100 100" aria-hidden="true"><path d="M22 82 L22 46 A28 28 0 0 1 78 46 L78 82"/><path d="M38 82 L38 50 A12 12 0 0 1 62 50 L62 82"/><path d="M22 82 L78 82"/></svg>
+          <span class="scale-note">48px &middot; 20px</span>
+        </div>
+      </div>
+
+      <div class="lockups">
+        <div class="lock lock-h">
+          <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><path d="M22 82 L22 46 A28 28 0 0 1 78 46 L78 82"/><path d="M38 82 L38 50 A12 12 0 0 1 62 50 L62 82"/><path d="M22 82 L78 82"/></svg>
+          <span class="wm"><b>WithinWorks</b><i>Leadership</i></span>
+        </div>
+        <div class="lock lock-v">
+          <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><path d="M22 82 L22 46 A28 28 0 0 1 78 46 L78 82"/><path d="M38 82 L38 50 A12 12 0 0 1 62 50 L62 82"/><path d="M22 82 L78 82"/></svg>
+          <span class="wm"><b>WithinWorks</b><i>Leadership</i></span>
+        </div>
+      </div>
+
+      <div class="ways">
+        <span class="way w-sage"><svg class="mark" viewBox="0 0 100 100"><path d="M22 82 L22 46 A28 28 0 0 1 78 46 L78 82"/><path d="M38 82 L38 50 A12 12 0 0 1 62 50 L62 82"/><path d="M22 82 L78 82"/></svg></span>
+        <span class="way w-clay"><svg class="mark" viewBox="0 0 100 100"><path d="M22 82 L22 46 A28 28 0 0 1 78 46 L78 82"/><path d="M38 82 L38 50 A12 12 0 0 1 62 50 L62 82"/><path d="M22 82 L78 82"/></svg></span>
+        <span class="way w-ink"><svg class="mark" viewBox="0 0 100 100"><path d="M22 82 L22 46 A28 28 0 0 1 78 46 L78 82"/><path d="M38 82 L38 50 A12 12 0 0 1 62 50 L62 82"/><path d="M22 82 L78 82"/></svg></span>
+        <span class="way w-rev"><svg class="mark" viewBox="0 0 100 100"><path d="M22 82 L22 46 A28 28 0 0 1 78 46 L78 82"/><path d="M38 82 L38 50 A12 12 0 0 1 62 50 L62 82"/><path d="M22 82 L78 82"/></svg></span>
+      </div>
+
+      <p class="idea">An arch stepping through an arch. Reinvention as a doorway rather than a crisis, straight from her own article.</p>
+      <p class="note">Architectural and calm. Strongest at large sizes.</p>
+    </article>
+    <article class="card">
+      <div class="card-top">
+        <span class="num">03</span>
+        <h2>Nested</h2>
+      </div>
+
+      <div class="stage">
+        <svg class="mark lg" viewBox="0 0 100 100" aria-hidden="true"><path d="M20.00 38.00 L50.00 72.50 L80.00 38.00"/><path d="M30.00 38.00 L50.00 61.00 L70.00 38.00"/><path d="M40.00 38.00 L50.00 49.50 L60.00 38.00"/></svg>
+        <div class="scale">
+          <svg class="mark sm" viewBox="0 0 100 100" aria-hidden="true"><path d="M20.00 38.00 L50.00 72.50 L80.00 38.00"/><path d="M30.00 38.00 L50.00 61.00 L70.00 38.00"/><path d="M40.00 38.00 L50.00 49.50 L60.00 38.00"/></svg>
+          <svg class="mark xs" viewBox="0 0 100 100" aria-hidden="true"><path d="M20.00 38.00 L50.00 72.50 L80.00 38.00"/><path d="M30.00 38.00 L50.00 61.00 L70.00 38.00"/><path d="M40.00 38.00 L50.00 49.50 L60.00 38.00"/></svg>
+          <span class="scale-note">48px &middot; 20px</span>
+        </div>
+      </div>
+
+      <div class="lockups">
+        <div class="lock lock-h">
+          <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><path d="M20.00 38.00 L50.00 72.50 L80.00 38.00"/><path d="M30.00 38.00 L50.00 61.00 L70.00 38.00"/><path d="M40.00 38.00 L50.00 49.50 L60.00 38.00"/></svg>
+          <span class="wm"><b>WithinWorks</b><i>Leadership</i></span>
+        </div>
+        <div class="lock lock-v">
+          <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><path d="M20.00 38.00 L50.00 72.50 L80.00 38.00"/><path d="M30.00 38.00 L50.00 61.00 L70.00 38.00"/><path d="M40.00 38.00 L50.00 49.50 L60.00 38.00"/></svg>
+          <span class="wm"><b>WithinWorks</b><i>Leadership</i></span>
+        </div>
+      </div>
+
+      <div class="ways">
+        <span class="way w-sage"><svg class="mark" viewBox="0 0 100 100"><path d="M20.00 38.00 L50.00 72.50 L80.00 38.00"/><path d="M30.00 38.00 L50.00 61.00 L70.00 38.00"/><path d="M40.00 38.00 L50.00 49.50 L60.00 38.00"/></svg></span>
+        <span class="way w-clay"><svg class="mark" viewBox="0 0 100 100"><path d="M20.00 38.00 L50.00 72.50 L80.00 38.00"/><path d="M30.00 38.00 L50.00 61.00 L70.00 38.00"/><path d="M40.00 38.00 L50.00 49.50 L60.00 38.00"/></svg></span>
+        <span class="way w-ink"><svg class="mark" viewBox="0 0 100 100"><path d="M20.00 38.00 L50.00 72.50 L80.00 38.00"/><path d="M30.00 38.00 L50.00 61.00 L70.00 38.00"/><path d="M40.00 38.00 L50.00 49.50 L60.00 38.00"/></svg></span>
+        <span class="way w-rev"><svg class="mark" viewBox="0 0 100 100"><path d="M20.00 38.00 L50.00 72.50 L80.00 38.00"/><path d="M30.00 38.00 L50.00 61.00 L70.00 38.00"/><path d="M40.00 38.00 L50.00 49.50 L60.00 38.00"/></svg></span>
+      </div>
+
+      <p class="idea">Three chevrons held inside one another, forming a W. Inside out, drawn as one shape sitting within another.</p>
+      <p class="note">Carries the W without spelling it. Sharpest and most modern.</p>
+    </article>
+    <article class="card">
+      <div class="card-top">
+        <span class="num">04</span>
+        <h2>Opening</h2>
+      </div>
+
+      <div class="stage">
+        <svg class="mark lg" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="12.0" stroke-dasharray="67.86 7.54" transform="rotate(90 50 50)"/><circle cx="50" cy="50" r="23.0" stroke-dasharray="121.39 23.12" transform="rotate(150 50 50)"/><circle cx="50" cy="50" r="34.0" stroke-dasharray="166.63 47.00" transform="rotate(210 50 50)"/></svg>
+        <div class="scale">
+          <svg class="mark sm" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="12.0" stroke-dasharray="67.86 7.54" transform="rotate(90 50 50)"/><circle cx="50" cy="50" r="23.0" stroke-dasharray="121.39 23.12" transform="rotate(150 50 50)"/><circle cx="50" cy="50" r="34.0" stroke-dasharray="166.63 47.00" transform="rotate(210 50 50)"/></svg>
+          <svg class="mark xs" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="12.0" stroke-dasharray="67.86 7.54" transform="rotate(90 50 50)"/><circle cx="50" cy="50" r="23.0" stroke-dasharray="121.39 23.12" transform="rotate(150 50 50)"/><circle cx="50" cy="50" r="34.0" stroke-dasharray="166.63 47.00" transform="rotate(210 50 50)"/></svg>
+          <span class="scale-note">48px &middot; 20px</span>
+        </div>
+      </div>
+
+      <div class="lockups">
+        <div class="lock lock-h">
+          <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="12.0" stroke-dasharray="67.86 7.54" transform="rotate(90 50 50)"/><circle cx="50" cy="50" r="23.0" stroke-dasharray="121.39 23.12" transform="rotate(150 50 50)"/><circle cx="50" cy="50" r="34.0" stroke-dasharray="166.63 47.00" transform="rotate(210 50 50)"/></svg>
+          <span class="wm"><b>WithinWorks</b><i>Leadership</i></span>
+        </div>
+        <div class="lock lock-v">
+          <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="12.0" stroke-dasharray="67.86 7.54" transform="rotate(90 50 50)"/><circle cx="50" cy="50" r="23.0" stroke-dasharray="121.39 23.12" transform="rotate(150 50 50)"/><circle cx="50" cy="50" r="34.0" stroke-dasharray="166.63 47.00" transform="rotate(210 50 50)"/></svg>
+          <span class="wm"><b>WithinWorks</b><i>Leadership</i></span>
+        </div>
+      </div>
+
+      <div class="ways">
+        <span class="way w-sage"><svg class="mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="12.0" stroke-dasharray="67.86 7.54" transform="rotate(90 50 50)"/><circle cx="50" cy="50" r="23.0" stroke-dasharray="121.39 23.12" transform="rotate(150 50 50)"/><circle cx="50" cy="50" r="34.0" stroke-dasharray="166.63 47.00" transform="rotate(210 50 50)"/></svg></span>
+        <span class="way w-clay"><svg class="mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="12.0" stroke-dasharray="67.86 7.54" transform="rotate(90 50 50)"/><circle cx="50" cy="50" r="23.0" stroke-dasharray="121.39 23.12" transform="rotate(150 50 50)"/><circle cx="50" cy="50" r="34.0" stroke-dasharray="166.63 47.00" transform="rotate(210 50 50)"/></svg></span>
+        <span class="way w-ink"><svg class="mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="12.0" stroke-dasharray="67.86 7.54" transform="rotate(90 50 50)"/><circle cx="50" cy="50" r="23.0" stroke-dasharray="121.39 23.12" transform="rotate(150 50 50)"/><circle cx="50" cy="50" r="34.0" stroke-dasharray="166.63 47.00" transform="rotate(210 50 50)"/></svg></span>
+        <span class="way w-rev"><svg class="mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="12.0" stroke-dasharray="67.86 7.54" transform="rotate(90 50 50)"/><circle cx="50" cy="50" r="23.0" stroke-dasharray="121.39 23.12" transform="rotate(150 50 50)"/><circle cx="50" cy="50" r="34.0" stroke-dasharray="166.63 47.00" transform="rotate(210 50 50)"/></svg></span>
+      </div>
+
+      <p class="idea">Concentric rings, each broken, the gaps turning outward. Movement from a closed centre toward an open edge.</p>
+      <p class="note">Quietest of the six. Survives best as a favicon.</p>
+    </article>
+    <article class="card">
+      <div class="card-top">
+        <span class="num">05</span>
+        <h2>The Core</h2>
+      </div>
+
+      <div class="stage">
+        <svg class="mark lg" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="7" class="fill"/><path d="M31.65 45.08 A19 19 0 0 1 68.35 45.08"/><path d="M68.35 54.92 A19 19 0 0 1 31.65 54.92"/><path d="M24.02 35.00 A30 30 0 0 1 75.98 35.00"/><path d="M75.98 65.00 A30 30 0 0 1 24.02 65.00"/><path d="M21.01 21.01 A41 41 0 0 1 78.99 21.01"/><path d="M78.99 78.99 A41 41 0 0 1 21.01 78.99"/></svg>
+        <div class="scale">
+          <svg class="mark sm" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="7" class="fill"/><path d="M31.65 45.08 A19 19 0 0 1 68.35 45.08"/><path d="M68.35 54.92 A19 19 0 0 1 31.65 54.92"/><path d="M24.02 35.00 A30 30 0 0 1 75.98 35.00"/><path d="M75.98 65.00 A30 30 0 0 1 24.02 65.00"/><path d="M21.01 21.01 A41 41 0 0 1 78.99 21.01"/><path d="M78.99 78.99 A41 41 0 0 1 21.01 78.99"/></svg>
+          <svg class="mark xs" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="7" class="fill"/><path d="M31.65 45.08 A19 19 0 0 1 68.35 45.08"/><path d="M68.35 54.92 A19 19 0 0 1 31.65 54.92"/><path d="M24.02 35.00 A30 30 0 0 1 75.98 35.00"/><path d="M75.98 65.00 A30 30 0 0 1 24.02 65.00"/><path d="M21.01 21.01 A41 41 0 0 1 78.99 21.01"/><path d="M78.99 78.99 A41 41 0 0 1 21.01 78.99"/></svg>
+          <span class="scale-note">48px &middot; 20px</span>
+        </div>
+      </div>
+
+      <div class="lockups">
+        <div class="lock lock-h">
+          <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="7" class="fill"/><path d="M31.65 45.08 A19 19 0 0 1 68.35 45.08"/><path d="M68.35 54.92 A19 19 0 0 1 31.65 54.92"/><path d="M24.02 35.00 A30 30 0 0 1 75.98 35.00"/><path d="M75.98 65.00 A30 30 0 0 1 24.02 65.00"/><path d="M21.01 21.01 A41 41 0 0 1 78.99 21.01"/><path d="M78.99 78.99 A41 41 0 0 1 21.01 78.99"/></svg>
+          <span class="wm"><b>WithinWorks</b><i>Leadership</i></span>
+        </div>
+        <div class="lock lock-v">
+          <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="7" class="fill"/><path d="M31.65 45.08 A19 19 0 0 1 68.35 45.08"/><path d="M68.35 54.92 A19 19 0 0 1 31.65 54.92"/><path d="M24.02 35.00 A30 30 0 0 1 75.98 35.00"/><path d="M75.98 65.00 A30 30 0 0 1 24.02 65.00"/><path d="M21.01 21.01 A41 41 0 0 1 78.99 21.01"/><path d="M78.99 78.99 A41 41 0 0 1 21.01 78.99"/></svg>
+          <span class="wm"><b>WithinWorks</b><i>Leadership</i></span>
+        </div>
+      </div>
+
+      <div class="ways">
+        <span class="way w-sage"><svg class="mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="7" class="fill"/><path d="M31.65 45.08 A19 19 0 0 1 68.35 45.08"/><path d="M68.35 54.92 A19 19 0 0 1 31.65 54.92"/><path d="M24.02 35.00 A30 30 0 0 1 75.98 35.00"/><path d="M75.98 65.00 A30 30 0 0 1 24.02 65.00"/><path d="M21.01 21.01 A41 41 0 0 1 78.99 21.01"/><path d="M78.99 78.99 A41 41 0 0 1 21.01 78.99"/></svg></span>
+        <span class="way w-clay"><svg class="mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="7" class="fill"/><path d="M31.65 45.08 A19 19 0 0 1 68.35 45.08"/><path d="M68.35 54.92 A19 19 0 0 1 31.65 54.92"/><path d="M24.02 35.00 A30 30 0 0 1 75.98 35.00"/><path d="M75.98 65.00 A30 30 0 0 1 24.02 65.00"/><path d="M21.01 21.01 A41 41 0 0 1 78.99 21.01"/><path d="M78.99 78.99 A41 41 0 0 1 21.01 78.99"/></svg></span>
+        <span class="way w-ink"><svg class="mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="7" class="fill"/><path d="M31.65 45.08 A19 19 0 0 1 68.35 45.08"/><path d="M68.35 54.92 A19 19 0 0 1 31.65 54.92"/><path d="M24.02 35.00 A30 30 0 0 1 75.98 35.00"/><path d="M75.98 65.00 A30 30 0 0 1 24.02 65.00"/><path d="M21.01 21.01 A41 41 0 0 1 78.99 21.01"/><path d="M78.99 78.99 A41 41 0 0 1 21.01 78.99"/></svg></span>
+        <span class="way w-rev"><svg class="mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="7" class="fill"/><path d="M31.65 45.08 A19 19 0 0 1 68.35 45.08"/><path d="M68.35 54.92 A19 19 0 0 1 31.65 54.92"/><path d="M24.02 35.00 A30 30 0 0 1 75.98 35.00"/><path d="M75.98 65.00 A30 30 0 0 1 24.02 65.00"/><path d="M21.01 21.01 A41 41 0 0 1 78.99 21.01"/><path d="M78.99 78.99 A41 41 0 0 1 21.01 78.99"/></svg></span>
+      </div>
+
+      <p class="idea">A solid centre with arcs radiating from it. What is inside sets what shows on the outside.</p>
+      <p class="note">Warmest. Slight risk of reading as a sound wave.</p>
+    </article>
+    <article class="card">
+      <div class="card-top">
+        <span class="num">06</span>
+        <h2>Monogram</h2>
+      </div>
+
+      <div class="stage">
+        <svg class="mark lg" viewBox="0 0 100 100" aria-hidden="true"><path d="M18 32 L31 68 L44 44 L50 58"/><path d="M82 32 L69 68 L56 44 L50 58"/><circle cx="50" cy="50" r="40" class="thin"/></svg>
+        <div class="scale">
+          <svg class="mark sm" viewBox="0 0 100 100" aria-hidden="true"><path d="M18 32 L31 68 L44 44 L50 58"/><path d="M82 32 L69 68 L56 44 L50 58"/><circle cx="50" cy="50" r="40" class="thin"/></svg>
+          <svg class="mark xs" viewBox="0 0 100 100" aria-hidden="true"><path d="M18 32 L31 68 L44 44 L50 58"/><path d="M82 32 L69 68 L56 44 L50 58"/><circle cx="50" cy="50" r="40" class="thin"/></svg>
+          <span class="scale-note">48px &middot; 20px</span>
+        </div>
+      </div>
+
+      <div class="lockups">
+        <div class="lock lock-h">
+          <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><path d="M18 32 L31 68 L44 44 L50 58"/><path d="M82 32 L69 68 L56 44 L50 58"/><circle cx="50" cy="50" r="40" class="thin"/></svg>
+          <span class="wm"><b>WithinWorks</b><i>Leadership</i></span>
+        </div>
+        <div class="lock lock-v">
+          <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><path d="M18 32 L31 68 L44 44 L50 58"/><path d="M82 32 L69 68 L56 44 L50 58"/><circle cx="50" cy="50" r="40" class="thin"/></svg>
+          <span class="wm"><b>WithinWorks</b><i>Leadership</i></span>
+        </div>
+      </div>
+
+      <div class="ways">
+        <span class="way w-sage"><svg class="mark" viewBox="0 0 100 100"><path d="M18 32 L31 68 L44 44 L50 58"/><path d="M82 32 L69 68 L56 44 L50 58"/><circle cx="50" cy="50" r="40" class="thin"/></svg></span>
+        <span class="way w-clay"><svg class="mark" viewBox="0 0 100 100"><path d="M18 32 L31 68 L44 44 L50 58"/><path d="M82 32 L69 68 L56 44 L50 58"/><circle cx="50" cy="50" r="40" class="thin"/></svg></span>
+        <span class="way w-ink"><svg class="mark" viewBox="0 0 100 100"><path d="M18 32 L31 68 L44 44 L50 58"/><path d="M82 32 L69 68 L56 44 L50 58"/><circle cx="50" cy="50" r="40" class="thin"/></svg></span>
+        <span class="way w-rev"><svg class="mark" viewBox="0 0 100 100"><path d="M18 32 L31 68 L44 44 L50 58"/><path d="M82 32 L69 68 L56 44 L50 58"/><circle cx="50" cy="50" r="40" class="thin"/></svg></span>
+      </div>
+
+      <p class="idea">Two strokes crossing to make a W, holding a diamond in the negative space at the centre.</p>
+      <p class="note">Most conventional. The safe option if the others feel too abstract.</p>
+    </article>
+  </div>
+
+  <footer>
+    All six use the site palette exactly: sage #5D6E5E, mocha #B08D6F, charcoal #3D3A35, ivory #FAF8F5. Wordmark set in Fraunces, the same face as the site headings. Every mark is vector, so it scales to a billboard or down to a favicon without redrawing.
+  </footer>
+</div>
