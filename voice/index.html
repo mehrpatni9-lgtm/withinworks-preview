@@ -1,0 +1,182 @@
+<title>Five questions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Jost:wght@300;400;500&display=swap">
+<style>
+  :root{
+    --bg:#faf8f5;--surface:#f2ede6;--sage-soft:#e7ece6;--sage:#8a9a8b;--sage-deep:#5d6e5e;
+    --clay:#b08d6f;--clay-deep:#8d6c50;--forest:#2f3a32;--text:#3d3a35;--text-light:#5c574f;
+    --text-faint:#7d766a;--rule:rgba(61,58,53,.14);
+    --serif:'Fraunces',Georgia,serif;--sans:'Jost','Helvetica Neue',Arial,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --bg:#1e211e;--surface:#272b27;--sage-soft:#2b322c;--sage-deep:#adbcae;--clay:#c9a685;
+    --clay-deep:#d9bb9e;--forest:#161a16;--text:#e9e6df;--text-light:#c0bbb1;--text-faint:#968f85;
+    --rule:rgba(233,230,223,.18);
+  }}
+  :root[data-theme="dark"]{
+    --bg:#1e211e;--surface:#272b27;--sage-soft:#2b322c;--sage-deep:#adbcae;--clay:#c9a685;
+    --clay-deep:#d9bb9e;--forest:#161a16;--text:#e9e6df;--text-light:#c0bbb1;--text-faint:#968f85;
+    --rule:rgba(233,230,223,.18);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;
+       line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:34rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+  .brand{font-family:var(--serif);font-weight:500;font-size:1.05rem;line-height:1.05}
+  .brand span{display:block;font-family:var(--sans);font-size:.55rem;letter-spacing:.24em;
+              text-transform:uppercase;color:var(--sage-deep);font-weight:400}
+  h1{font-family:var(--serif);font-weight:500;font-size:1.9rem;line-height:1.2;margin:2rem 0 0;text-wrap:balance}
+  .lede{color:var(--text-light);margin:.9rem 0 0;font-size:1.02rem}
+
+  .q{margin-top:2.6rem;padding-top:1.8rem;border-top:1px solid var(--rule)}
+  .qn{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--clay-deep);margin:0 0 .5rem}
+  h2{font-family:var(--serif);font-weight:500;font-size:1.3rem;margin:0 0 .35rem;line-height:1.25}
+  .hint{color:var(--text-faint);font-size:.92rem;margin:0 0 1.1rem}
+
+  .opts{display:grid;gap:.6rem}
+  label.opt{display:flex;gap:.75rem;align-items:flex-start;background:var(--surface);
+            border:1.5px solid transparent;border-radius:6px;padding:.95rem 1rem;cursor:pointer;
+            font-size:1.02rem;line-height:1.45;transition:border-color .2s ease,background .2s ease}
+  label.opt:has(input:checked){border-color:var(--clay);background:var(--sage-soft)}
+  label.opt input{margin:.35rem 0 0;accent-color:var(--sage-deep);flex:none;width:1.05rem;height:1.05rem}
+
+  textarea{width:100%;margin-top:.6rem;background:var(--bg);color:var(--text);
+           border:1.5px solid var(--rule);border-radius:6px;padding:.85rem 1rem;
+           font-family:var(--sans);font-size:1.02rem;line-height:1.5;resize:vertical;min-height:4.5rem}
+  textarea:focus{outline:none;border-color:var(--sage-deep)}
+  textarea[hidden]{display:none}
+
+  .send{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--rule)}
+  button{width:100%;background:var(--sage-deep);color:var(--bg);border:none;border-radius:6px;
+         padding:1.05rem;font-family:var(--sans);font-size:1.05rem;font-weight:400;cursor:pointer;
+         transition:background .2s ease}
+  button:hover{background:var(--sage)}
+  .note{text-align:center;color:var(--text-faint);font-size:.9rem;margin:.9rem 0 0}
+  .done{display:none;background:var(--sage-soft);border-radius:6px;padding:1.1rem;margin-top:1rem;
+        font-size:.98rem;color:var(--text)}
+  .done.on{display:block}
+</style>
+
+<div class="wrap">
+  <div class="brand">WithinWorks<span>Leadership</span></div>
+
+  <h1>Five questions, so everything we write sounds like you</h1>
+  <p class="lede">Tap the ones that feel right. If none do, there is a box on every question. Two minutes.</p>
+
+  <form id="f">
+
+    <div class="q" data-q="At dinner, what do you actually say you do?">
+      <p class="qn">Question one</p>
+      <h2>Say it out loud</h2>
+      <p class="hint">Someone you respect asks what you are doing now. Which is closest to your real answer?</p>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q1" value="I coach senior leaders and founders."> I coach senior leaders and founders.</label>
+        <label class="opt"><input type="radio" name="q1" value="I work with people at a turning point in their career."> I work with people at a turning point in their career.</label>
+        <label class="opt"><input type="radio" name="q1" value="I spent 25 years running people functions. Now I coach the people running them."> I spent 25 years running people functions. Now I coach the people running them.</label>
+        <label class="opt"><input type="radio" name="q1" value="OTHER" data-other> Something else, in my words</label>
+      </div>
+      <textarea hidden placeholder="Say it the way you would actually say it"></textarea>
+    </div>
+
+    <div class="q" data-q="Which booking line sounds like you?">
+      <p class="qn">Question two</p>
+      <h2>Which sounds like you</h2>
+      <p class="hint">How we invite someone to that first call.</p>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q2" value="Book a complimentary discovery call"> Book a complimentary discovery call</label>
+        <label class="opt"><input type="radio" name="q2" value="Let us have a conversation first"> Let us have a conversation first</label>
+        <label class="opt"><input type="radio" name="q2" value="Start with a discovery call"> Start with a discovery call</label>
+        <label class="opt"><input type="radio" name="q2" value="OTHER" data-other> Something else</label>
+      </div>
+      <textarea hidden placeholder="Your wording"></textarea>
+    </div>
+
+    <div class="q" data-q="Which describes the work?">
+      <p class="qn">Question three</p>
+      <h2>Which sounds like you</h2>
+      <p class="hint">How we describe what actually happens in a session.</p>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q3" value="I help leaders unlock their potential"> I help leaders unlock their potential</label>
+        <label class="opt"><input type="radio" name="q3" value="I do not give advice. I create the space."> I do not give advice. I create the space.</label>
+        <label class="opt"><input type="radio" name="q3" value="A room where you can think without performing"> A room where you can think without performing</label>
+        <label class="opt"><input type="radio" name="q3" value="OTHER" data-other> Something else</label>
+      </div>
+      <textarea hidden placeholder="Your wording"></textarea>
+    </div>
+
+    <div class="q" data-q="What makes you cringe?">
+      <p class="qn">Question four</p>
+      <h2>What makes you cringe</h2>
+      <p class="hint">Tick anything you would never want on your site. As many as you like.</p>
+      <div class="opts">
+        <label class="opt"><input type="checkbox" name="q4" value="Unlock your potential"> Unlock your potential</label>
+        <label class="opt"><input type="checkbox" name="q4" value="Transform your life"> Transform your life</label>
+        <label class="opt"><input type="checkbox" name="q4" value="Empower / empowerment"> Empower, empowerment</label>
+        <label class="opt"><input type="checkbox" name="q4" value="Your journey"> Your journey</label>
+        <label class="opt"><input type="checkbox" name="q4" value="Holistic, aligned, abundance"> Holistic, aligned, abundance</label>
+        <label class="opt"><input type="checkbox" name="q4" value="OTHER" data-other> Something else that makes me look away</label>
+      </div>
+      <textarea hidden placeholder="Words or phrases to avoid"></textarea>
+    </div>
+
+    <div class="q" data-q="What do clients say changed?">
+      <p class="qn">Question five</p>
+      <h2>Their words</h2>
+      <p class="hint">When someone finishes working with you, what do they say changed? Their phrasing, even if clumsy.</p>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q5" value="OTHER" data-other checked> In their words</label>
+      </div>
+      <textarea placeholder="Even one half remembered line is useful"></textarea>
+    </div>
+
+    <div class="send">
+      <button type="button" id="go">Copy my answers</button>
+      <p class="note">Then paste them into our chat. Nothing is saved here.</p>
+      <div class="done" id="done">Copied. Paste it into the group and that is you done.</div>
+    </div>
+
+  </form>
+</div>
+
+<script>
+  document.querySelectorAll('.q').forEach(function (q) {
+    var ta = q.querySelector('textarea');
+    q.addEventListener('change', function () {
+      var other = q.querySelector('[data-other]');
+      if (!other || !ta) return;
+      var show = other.type === 'checkbox' ? other.checked : other.checked;
+      ta.hidden = !show;
+      if (show) ta.focus();
+    });
+  });
+
+  document.getElementById('go').addEventListener('click', function () {
+    var out = ['WithinWorks, five questions', ''];
+    document.querySelectorAll('.q').forEach(function (q, i) {
+      var picked = [].slice.call(q.querySelectorAll('input:checked'))
+        .map(function (i) { return i.value; })
+        .filter(function (v) { return v !== 'OTHER'; });
+      var ta = q.querySelector('textarea');
+      if (ta && ta.value.trim()) picked.push(ta.value.trim());
+      out.push((i + 1) + '. ' + q.dataset.q);
+      out.push(picked.length ? picked.join(' / ') : '(skipped)');
+      out.push('');
+    });
+    var text = out.join('\n');
+    function flash() {
+      document.getElementById('done').classList.add('on');
+      document.getElementById('go').textContent = 'Copied';
+    }
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(flash, function () { fallback(text); });
+    } else { fallback(text); }
+    function fallback(t) {
+      var a = document.createElement('textarea');
+      a.value = t; document.body.appendChild(a); a.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(a); flash();
+    }
+  });
+</script>
