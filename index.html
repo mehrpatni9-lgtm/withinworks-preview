@@ -1,5 +1,5 @@
 <title>WithinWorks Leadership</title>
-<link rel="icon" type="image/png" href="img/favicon.png?v=19">
+<link rel="icon" type="image/png" href="img/favicon.png?v=21">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Jost:wght@300;400;500&display=swap">
@@ -644,6 +644,29 @@
   .test-role b { display: block; color: var(--text); font-weight: 500; font-size: 0.9rem; }
   @media (max-width: 52rem) { .tests { grid-template-columns: 1fr; } }
 
+  /* ---------- scroll reveal ---------- */
+  .reveal {
+    height: clamp(20rem, 56vh, 34rem);
+    background-image:
+      linear-gradient(to bottom, var(--bg) 0%, rgba(250,248,245,.62) 10%, rgba(250,248,245,.14) 28%, rgba(242,237,230,.16) 70%, rgba(242,237,230,.68) 90%, var(--surface) 100%),
+      url("img/parallax.jpg?v=21");
+    background-size: auto, cover;
+    background-position: center, center 40%;
+    background-repeat: no-repeat;
+    background-attachment: scroll, fixed;
+  }
+  /* iOS ignores fixed attachment, so give it a clean static crop instead */
+  @media (hover: none), (max-width: 48rem) {
+    .reveal {
+      background-attachment: scroll, scroll;
+      background-position: center, center 38%;
+      height: clamp(15rem, 38vh, 22rem);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { background-attachment: scroll, scroll; }
+  }
+
   /* ---------- writing ---------- */
   .posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
   .post-card {
@@ -919,7 +942,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="shell hero-grid">
-    <div class="hero-photo"><img src="img/hero.jpg?v=19" alt="Megha Bhalla, executive and transformational coach"></div>
+    <div class="hero-photo"><img src="img/hero.jpg?v=21" alt="Megha Bhalla, executive and transformational coach"></div>
     <div>
       <p class="eyebrow">Executive &amp; transformational coaching</p>
       <h1>Transformation happens from the <span class="lean marked">inside out<svg viewBox="0 0 200 12" aria-hidden="true" preserveAspectRatio="none"><path d="M3 8.5C38 3.2 92 2.4 142 5.1c18 1 38 2.4 55 4.2"/></svg></span>.</h1>
@@ -945,11 +968,11 @@
   <div class="shell">
     <p class="proof-label">A career built across</p>
     <div class="proof-row rise">
-      <img src="img/logos/traveazy.png?v=19" alt="Traveazy Group" data-knockout>
-      <img src="img/logos/holidayme.png?v=19" alt="Holidayme">
-      <img src="img/logos/umrahme.png?v=19" alt="Umrahme">
-      <img src="img/logos/barclays.svg?v=19" alt="Barclays">
-      <img src="img/logos/citibank.svg?v=19" alt="Citibank">
+      <img src="img/logos/traveazy.png?v=21" alt="Traveazy Group" data-knockout>
+      <img src="img/logos/holidayme.png?v=21" alt="Holidayme">
+      <img src="img/logos/umrahme.png?v=21" alt="Umrahme">
+      <img src="img/logos/barclays.svg?v=21" alt="Barclays">
+      <img src="img/logos/citibank.svg?v=21" alt="Citibank">
     </div>
   </div>
 </div>
@@ -1039,7 +1062,7 @@
 
 <!-- QUOTE BAND -->
 <div class="qband band-dark">
-  <img src="img/band.jpg?v=19" alt="Megha Bhalla in her workspace">
+  <img src="img/band.jpg?v=21" alt="Megha Bhalla in her workspace">
   <div class="qband-copy">
     <p class="eyebrow">The approach</p>
     <span class="glyph" aria-hidden="true">&ldquo;</span>
@@ -1088,7 +1111,7 @@
 <!-- ABOUT -->
 <section class="band-tint about-split" id="about">
       <figure class="portrait">
-        <img src="img/about.jpg?v=19" alt="Megha Bhalla, executive and transformational coach">
+        <img src="img/about.jpg?v=21" alt="Megha Bhalla, executive and transformational coach">
         <span class="wash" aria-hidden="true"></span>
 
         <p class="hi">Hi, I&rsquo;m <em>Megha</em></p>
@@ -1163,6 +1186,8 @@
     </div>
   </div>
 </section>
+
+<div class="reveal" aria-hidden="true"></div>
 
 <!-- WRITING -->
 <section class="band-tint" id="writing">
@@ -1267,7 +1292,7 @@
         <a class="btn btn-mocha" href="#">Download the brochure</a>
       </div>
     </div>
-    <div class="cta-photo"><img src="img/online.jpg?v=19" alt="An online coaching session"></div>
+    <div class="cta-photo"><img src="img/online.jpg?v=21" alt="An online coaching session"></div>
   </div>
 </section>
 
