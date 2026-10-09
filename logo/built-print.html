@@ -1,0 +1,154 @@
+<meta charset="utf-8"><title>build</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300&family=Jost:wght@300;400;500&display=swap"><style>
+  :root{--bg:#faf8f5;--surface:#f2ede6;--clay:#b08d6f;--forest:#2f3a32;--text:#3d3a35;
+        --text-light:#5c574f;--text-faint:#7d766a;--rule:rgba(61,58,53,.1);
+        --c:#b08d6f;--d:#5d6e5e;--serif:'Fraunces',Georgia,serif;--sans:'Jost',Arial,sans-serif}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;width:1400px}
+  .sheet{padding:34px 40px 40px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:var(--surface);border-radius:9px;padding:24px 22px 20px}
+  .hdr{display:flex;align-items:baseline;gap:10px;margin-bottom:4mm}
+  .hdr b{font-size:11px;letter-spacing:.16em;color:var(--clay);font-weight:500}
+  h2{font-family:var(--serif);font-weight:500;font-size:21px;margin:0}
+  .stage{background:var(--bg);border-radius:6px;height:168px;display:flex;align-items:center;
+         justify-content:center;padding:14px;overflow:hidden}
+  .t{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-faint);
+     display:block;margin:14px 0 7px}
+  .locks{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .lh{display:flex;align-items:center;gap:9px;background:var(--bg);border-radius:6px;
+      padding:12px;min-height:66px}
+  .lv{display:flex;flex-direction:column;align-items:center;gap:5px;background:var(--bg);
+      border-radius:6px;padding:12px;min-height:66px;justify-content:center}
+  .stk{display:flex;flex-direction:column;line-height:1.05}
+  .sub{font-family:var(--sans);font-size:7.5px;letter-spacing:.3em;text-transform:uppercase;
+       color:var(--d);display:block;margin-top:2px}
+  .wm{font-family:var(--serif);line-height:1;white-space:nowrap}
+  .wm i{font-style:italic;font-weight:300;color:var(--d)}
+  .wm b{font-weight:600;color:var(--text)}
+  .ways{display:flex;gap:8px;margin-top:14px}
+  .w{flex:1;background:var(--bg);border-radius:6px;height:62px;display:flex;
+     align-items:center;justify-content:center}
+  .w.clay{--d:#b08d6f;--c:#8d6c50}
+  .w.ink{--d:#3d3a35;--c:#7d766a}
+  .w.rev{background:var(--forest);--d:#eae7e0;--c:#c9a685}
+  .sizes .sz{display:flex;align-items:flex-end;gap:14px;background:var(--bg);
+             border-radius:6px;padding:14px;min-height:72px}
+  .note{font-size:13px;line-height:1.5;color:var(--text-light);margin:14px 0 0}
+  svg{display:block;overflow:visible;height:auto}
+
+  @page{size:A4;margin:0}
+  body{width:auto}
+  .pg{width:210mm;height:297mm;padding:11mm;background:var(--bg);
+      display:flex;flex-direction:column;gap:7mm;page-break-after:always;overflow:hidden}
+  .pg>.card{flex:1;min-height:0;display:flex;flex-direction:column}
+  .pg:last-child{page-break-after:auto}
+  .card{padding:6mm 7mm 5mm}
+  .stage{height:30mm;flex:none}
+  h2{font-size:17pt}
+  .hdr b{font-size:9pt}
+  .note{font-size:10pt;margin-top:auto;padding-top:3mm}
+  .t{font-size:7.5pt;margin:3mm 0 2mm}
+  .w{height:13mm}
+  .lh,.lv{min-height:15mm;padding:3.5mm}
+  .sizes .sz{min-height:15mm;padding:3mm}
+</style><div class="pg"><div class="card">
+  <div class="hdr"><b>01</b><h2>No symbol</h2></div>
+  <div class="stage"><span class="wm" style="font-size:52px"><i>Within</i><b>Works</b></span></div>
+  <div class="locks">
+    <div><span class="t">Horizontal</span><div class="lh"><span class="wm" style="font-size:30px"><i>Within</i><b>Works</b></span><span class="sub">Leadership</span></div></div>
+    <div><span class="t">Stacked</span><div class="lv"><span class="wm" style="font-size:25px"><i>Within</i><b>Works</b></span><span class="sub">Leadership</span></div></div>
+  </div>
+  <div class="ways">
+    <span class="w"> <svg viewBox="0 0 110 110" style="width:34px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="104" font-weight="600" fill="var(--d)">W</text></svg></span>
+    <span class="w clay"><svg viewBox="0 0 110 110" style="width:34px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="104" font-weight="600" fill="var(--d)">W</text></svg></span>
+    <span class="w ink"> <svg viewBox="0 0 110 110" style="width:34px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="104" font-weight="600" fill="var(--d)">W</text></svg></span>
+    <span class="w rev"> <svg viewBox="0 0 110 110" style="width:34px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="104" font-weight="600" fill="var(--d)">W</text></svg></span>
+  </div>
+  <div class="sizes"><span class="t">48px &middot; 32px &middot; 20px</span>
+    <div class="sz"><svg viewBox="0 0 110 110" style="width:48px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="104" font-weight="600" fill="var(--d)">W</text></svg><svg viewBox="0 0 110 110" style="width:32px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="104" font-weight="600" fill="var(--d)">W</text></svg><svg viewBox="0 0 110 110" style="width:20px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="104" font-weight="600" fill="var(--d)">W</text></svg></div></div>
+  <p class="note">The name does all the work. Nothing to misread, nothing to shrink badly.</p>
+</div>
+<div class="card">
+  <div class="hdr"><b>02</b><h2>The held space</h2></div>
+  <div class="stage"><svg viewBox="0 0 150 70" style="width:150px"><path d="M34 10 L14 10 L14 60 L34 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><path d="M116 10 L136 10 L136 60 L116 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><circle cx="75" cy="35" r="4.5" fill="var(--d)"/></svg></div>
+  <div class="locks">
+    <div><span class="t">Horizontal</span><div class="lh"><svg viewBox="0 0 150 70" style="width:36px"><path d="M34 10 L14 10 L14 60 L34 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><path d="M116 10 L136 10 L136 60 L116 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><circle cx="75" cy="35" r="4.5" fill="var(--d)"/></svg><span class="stk"><span class="wm" style="font-size:22px"><i>Within</i><b>Works</b></span><span class="sub">Leadership</span></span></div></div>
+    <div><span class="t">Stacked</span><div class="lv"><svg viewBox="0 0 150 70" style="width:32px"><path d="M34 10 L14 10 L14 60 L34 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><path d="M116 10 L136 10 L136 60 L116 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><circle cx="75" cy="35" r="4.5" fill="var(--d)"/></svg><span class="wm" style="font-size:19px"><i>Within</i><b>Works</b></span><span class="sub">Leadership</span></div></div>
+  </div>
+  <div class="ways">
+    <span class="w"> <svg viewBox="0 0 150 70" style="width:34px"><path d="M34 10 L14 10 L14 60 L34 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><path d="M116 10 L136 10 L136 60 L116 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><circle cx="75" cy="35" r="4.5" fill="var(--d)"/></svg></span>
+    <span class="w clay"><svg viewBox="0 0 150 70" style="width:34px"><path d="M34 10 L14 10 L14 60 L34 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><path d="M116 10 L136 10 L136 60 L116 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><circle cx="75" cy="35" r="4.5" fill="var(--d)"/></svg></span>
+    <span class="w ink"> <svg viewBox="0 0 150 70" style="width:34px"><path d="M34 10 L14 10 L14 60 L34 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><path d="M116 10 L136 10 L136 60 L116 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><circle cx="75" cy="35" r="4.5" fill="var(--d)"/></svg></span>
+    <span class="w rev"> <svg viewBox="0 0 150 70" style="width:34px"><path d="M34 10 L14 10 L14 60 L34 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><path d="M116 10 L136 10 L136 60 L116 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><circle cx="75" cy="35" r="4.5" fill="var(--d)"/></svg></span>
+  </div>
+  <div class="sizes"><span class="t">48px &middot; 32px &middot; 20px</span>
+    <div class="sz"><svg viewBox="0 0 150 70" style="width:48px"><path d="M34 10 L14 10 L14 60 L34 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><path d="M116 10 L136 10 L136 60 L116 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><circle cx="75" cy="35" r="4.5" fill="var(--d)"/></svg><svg viewBox="0 0 150 70" style="width:32px"><path d="M34 10 L14 10 L14 60 L34 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><path d="M116 10 L136 10 L136 60 L116 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><circle cx="75" cy="35" r="4.5" fill="var(--d)"/></svg><svg viewBox="0 0 150 70" style="width:20px"><path d="M34 10 L14 10 L14 60 L34 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><path d="M116 10 L136 10 L136 60 L116 60" fill="none" stroke="var(--c)" stroke-width="2.4" stroke-linecap="round"/><circle cx="75" cy="35" r="4.5" fill="var(--d)"/></svg></div></div>
+  <p class="note">Elegant at size. Watch how little survives at 20px.</p>
+</div>
+</div><div class="pg"><div class="card">
+  <div class="hdr"><b>03</b><h2>The counter</h2></div>
+  <div class="stage"><svg viewBox="0 0 120 120" style="width:128px"><path d="M20 26 L38 94 L60 48 L82 94 L100 26" fill="none" stroke="var(--d)" stroke-width="9" stroke-linecap="square"/><path d="M60 48 L49 71 L71 71 Z" fill="var(--c)"/></svg></div>
+  <div class="locks">
+    <div><span class="t">Horizontal</span><div class="lh"><svg viewBox="0 0 120 120" style="width:36px"><path d="M20 26 L38 94 L60 48 L82 94 L100 26" fill="none" stroke="var(--d)" stroke-width="9" stroke-linecap="square"/><path d="M60 48 L49 71 L71 71 Z" fill="var(--c)"/></svg><span class="stk"><span class="wm" style="font-size:22px"><i>Within</i><b>Works</b></span><span class="sub">Leadership</span></span></div></div>
+    <div><span class="t">Stacked</span><div class="lv"><svg viewBox="0 0 120 120" style="width:32px"><path d="M20 26 L38 94 L60 48 L82 94 L100 26" fill="none" stroke="var(--d)" stroke-width="9" stroke-linecap="square"/><path d="M60 48 L49 71 L71 71 Z" fill="var(--c)"/></svg><span class="wm" style="font-size:19px"><i>Within</i><b>Works</b></span><span class="sub">Leadership</span></div></div>
+  </div>
+  <div class="ways">
+    <span class="w"> <svg viewBox="0 0 120 120" style="width:34px"><path d="M20 26 L38 94 L60 48 L82 94 L100 26" fill="none" stroke="var(--d)" stroke-width="9" stroke-linecap="square"/><path d="M60 48 L49 71 L71 71 Z" fill="var(--c)"/></svg></span>
+    <span class="w clay"><svg viewBox="0 0 120 120" style="width:34px"><path d="M20 26 L38 94 L60 48 L82 94 L100 26" fill="none" stroke="var(--d)" stroke-width="9" stroke-linecap="square"/><path d="M60 48 L49 71 L71 71 Z" fill="var(--c)"/></svg></span>
+    <span class="w ink"> <svg viewBox="0 0 120 120" style="width:34px"><path d="M20 26 L38 94 L60 48 L82 94 L100 26" fill="none" stroke="var(--d)" stroke-width="9" stroke-linecap="square"/><path d="M60 48 L49 71 L71 71 Z" fill="var(--c)"/></svg></span>
+    <span class="w rev"> <svg viewBox="0 0 120 120" style="width:34px"><path d="M20 26 L38 94 L60 48 L82 94 L100 26" fill="none" stroke="var(--d)" stroke-width="9" stroke-linecap="square"/><path d="M60 48 L49 71 L71 71 Z" fill="var(--c)"/></svg></span>
+  </div>
+  <div class="sizes"><span class="t">48px &middot; 32px &middot; 20px</span>
+    <div class="sz"><svg viewBox="0 0 120 120" style="width:48px"><path d="M20 26 L38 94 L60 48 L82 94 L100 26" fill="none" stroke="var(--d)" stroke-width="9" stroke-linecap="square"/><path d="M60 48 L49 71 L71 71 Z" fill="var(--c)"/></svg><svg viewBox="0 0 120 120" style="width:32px"><path d="M20 26 L38 94 L60 48 L82 94 L100 26" fill="none" stroke="var(--d)" stroke-width="9" stroke-linecap="square"/><path d="M60 48 L49 71 L71 71 Z" fill="var(--c)"/></svg><svg viewBox="0 0 120 120" style="width:20px"><path d="M20 26 L38 94 L60 48 L82 94 L100 26" fill="none" stroke="var(--d)" stroke-width="9" stroke-linecap="square"/><path d="M60 48 L49 71 L71 71 Z" fill="var(--c)"/></svg></div></div>
+  <p class="note">The only mark carrying an idea that still reads small.</p>
+</div>
+<div class="card">
+  <div class="hdr"><b>04</b><h2>One letter</h2></div>
+  <div class="stage"><svg viewBox="0 0 110 110" style="width:104px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="108" font-weight="500" fill="var(--d)">W</text></svg></div>
+  <div class="locks">
+    <div><span class="t">Horizontal</span><div class="lh"><svg viewBox="0 0 110 110" style="width:36px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="108" font-weight="500" fill="var(--d)">W</text></svg><span class="stk"><span class="wm" style="font-size:22px"><i>Within</i><b>Works</b></span><span class="sub">Leadership</span></span></div></div>
+    <div><span class="t">Stacked</span><div class="lv"><svg viewBox="0 0 110 110" style="width:32px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="108" font-weight="500" fill="var(--d)">W</text></svg><span class="wm" style="font-size:19px"><i>Within</i><b>Works</b></span><span class="sub">Leadership</span></div></div>
+  </div>
+  <div class="ways">
+    <span class="w"> <svg viewBox="0 0 110 110" style="width:34px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="108" font-weight="500" fill="var(--d)">W</text></svg></span>
+    <span class="w clay"><svg viewBox="0 0 110 110" style="width:34px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="108" font-weight="500" fill="var(--d)">W</text></svg></span>
+    <span class="w ink"> <svg viewBox="0 0 110 110" style="width:34px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="108" font-weight="500" fill="var(--d)">W</text></svg></span>
+    <span class="w rev"> <svg viewBox="0 0 110 110" style="width:34px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="108" font-weight="500" fill="var(--d)">W</text></svg></span>
+  </div>
+  <div class="sizes"><span class="t">48px &middot; 32px &middot; 20px</span>
+    <div class="sz"><svg viewBox="0 0 110 110" style="width:48px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="108" font-weight="500" fill="var(--d)">W</text></svg><svg viewBox="0 0 110 110" style="width:32px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="108" font-weight="500" fill="var(--d)">W</text></svg><svg viewBox="0 0 110 110" style="width:20px"><text x="2" y="88" font-family="Fraunces,Georgia,serif" font-size="108" font-weight="500" fill="var(--d)">W</text></svg></div></div>
+  <p class="note">The most assured. Says less, but never fails.</p>
+</div>
+</div><div class="pg"><div class="card">
+  <div class="hdr"><b>05</b><h2>The pause</h2></div>
+  <div class="stage"><svg viewBox="0 0 80 90" style="width:72px"><rect x="26" y="8" width="5" height="74" rx="2.5" fill="var(--d)"/><rect x="48" y="26" width="5" height="38" rx="2.5" fill="var(--c)"/></svg></div>
+  <div class="locks">
+    <div><span class="t">Horizontal</span><div class="lh"><svg viewBox="0 0 80 90" style="width:36px"><rect x="26" y="8" width="5" height="74" rx="2.5" fill="var(--d)"/><rect x="48" y="26" width="5" height="38" rx="2.5" fill="var(--c)"/></svg><span class="stk"><span class="wm" style="font-size:22px"><i>Within</i><b>Works</b></span><span class="sub">Leadership</span></span></div></div>
+    <div><span class="t">Stacked</span><div class="lv"><svg viewBox="0 0 80 90" style="width:32px"><rect x="26" y="8" width="5" height="74" rx="2.5" fill="var(--d)"/><rect x="48" y="26" width="5" height="38" rx="2.5" fill="var(--c)"/></svg><span class="wm" style="font-size:19px"><i>Within</i><b>Works</b></span><span class="sub">Leadership</span></div></div>
+  </div>
+  <div class="ways">
+    <span class="w"> <svg viewBox="0 0 80 90" style="width:34px"><rect x="26" y="8" width="5" height="74" rx="2.5" fill="var(--d)"/><rect x="48" y="26" width="5" height="38" rx="2.5" fill="var(--c)"/></svg></span>
+    <span class="w clay"><svg viewBox="0 0 80 90" style="width:34px"><rect x="26" y="8" width="5" height="74" rx="2.5" fill="var(--d)"/><rect x="48" y="26" width="5" height="38" rx="2.5" fill="var(--c)"/></svg></span>
+    <span class="w ink"> <svg viewBox="0 0 80 90" style="width:34px"><rect x="26" y="8" width="5" height="74" rx="2.5" fill="var(--d)"/><rect x="48" y="26" width="5" height="38" rx="2.5" fill="var(--c)"/></svg></span>
+    <span class="w rev"> <svg viewBox="0 0 80 90" style="width:34px"><rect x="26" y="8" width="5" height="74" rx="2.5" fill="var(--d)"/><rect x="48" y="26" width="5" height="38" rx="2.5" fill="var(--c)"/></svg></span>
+  </div>
+  <div class="sizes"><span class="t">48px &middot; 32px &middot; 20px</span>
+    <div class="sz"><svg viewBox="0 0 80 90" style="width:48px"><rect x="26" y="8" width="5" height="74" rx="2.5" fill="var(--d)"/><rect x="48" y="26" width="5" height="38" rx="2.5" fill="var(--c)"/></svg><svg viewBox="0 0 80 90" style="width:32px"><rect x="26" y="8" width="5" height="74" rx="2.5" fill="var(--d)"/><rect x="48" y="26" width="5" height="38" rx="2.5" fill="var(--c)"/></svg><svg viewBox="0 0 80 90" style="width:20px"><rect x="26" y="8" width="5" height="74" rx="2.5" fill="var(--d)"/><rect x="48" y="26" width="5" height="38" rx="2.5" fill="var(--c)"/></svg></div></div>
+  <p class="note">Striking large, ambiguous small.</p>
+</div>
+<div class="card">
+  <div class="hdr"><b>06</b><h2>Two Ws, offset</h2></div>
+  <div class="stage"><svg viewBox="0 0 140 110" style="width:138px"><path d="M18 24 L36 84 L56 44" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M56 44 L74 84 L94 24" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 60 L78 100 L98 40" fill="none" stroke="var(--c)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/></svg></div>
+  <div class="locks">
+    <div><span class="t">Horizontal</span><div class="lh"><svg viewBox="0 0 140 110" style="width:36px"><path d="M18 24 L36 84 L56 44" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M56 44 L74 84 L94 24" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 60 L78 100 L98 40" fill="none" stroke="var(--c)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/></svg><span class="stk"><span class="wm" style="font-size:22px"><i>Within</i><b>Works</b></span><span class="sub">Leadership</span></span></div></div>
+    <div><span class="t">Stacked</span><div class="lv"><svg viewBox="0 0 140 110" style="width:32px"><path d="M18 24 L36 84 L56 44" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M56 44 L74 84 L94 24" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 60 L78 100 L98 40" fill="none" stroke="var(--c)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/></svg><span class="wm" style="font-size:19px"><i>Within</i><b>Works</b></span><span class="sub">Leadership</span></div></div>
+  </div>
+  <div class="ways">
+    <span class="w"> <svg viewBox="0 0 140 110" style="width:34px"><path d="M18 24 L36 84 L56 44" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M56 44 L74 84 L94 24" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 60 L78 100 L98 40" fill="none" stroke="var(--c)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/></svg></span>
+    <span class="w clay"><svg viewBox="0 0 140 110" style="width:34px"><path d="M18 24 L36 84 L56 44" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M56 44 L74 84 L94 24" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 60 L78 100 L98 40" fill="none" stroke="var(--c)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/></svg></span>
+    <span class="w ink"> <svg viewBox="0 0 140 110" style="width:34px"><path d="M18 24 L36 84 L56 44" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M56 44 L74 84 L94 24" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 60 L78 100 L98 40" fill="none" stroke="var(--c)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/></svg></span>
+    <span class="w rev"> <svg viewBox="0 0 140 110" style="width:34px"><path d="M18 24 L36 84 L56 44" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M56 44 L74 84 L94 24" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 60 L78 100 L98 40" fill="none" stroke="var(--c)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/></svg></span>
+  </div>
+  <div class="sizes"><span class="t">48px &middot; 32px &middot; 20px</span>
+    <div class="sz"><svg viewBox="0 0 140 110" style="width:48px"><path d="M18 24 L36 84 L56 44" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M56 44 L74 84 L94 24" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 60 L78 100 L98 40" fill="none" stroke="var(--c)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/></svg><svg viewBox="0 0 140 110" style="width:32px"><path d="M18 24 L36 84 L56 44" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M56 44 L74 84 L94 24" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 60 L78 100 L98 40" fill="none" stroke="var(--c)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/></svg><svg viewBox="0 0 140 110" style="width:20px"><path d="M18 24 L36 84 L56 44" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M56 44 L74 84 L94 24" fill="none" stroke="var(--d)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 60 L78 100 L98 40" fill="none" stroke="var(--c)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/></svg></div></div>
+  <p class="note">Your monogram, decircled. Overlap muddles when it shrinks.</p>
+</div></div>

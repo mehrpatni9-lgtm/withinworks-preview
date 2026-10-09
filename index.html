@@ -612,6 +612,14 @@
     background: var(--surface-sage);
   }
   .test-avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .test-avatar.initials {
+    display: flex; align-items: center; justify-content: center;
+    background: var(--surface-sage); border: 1px solid var(--rule-soft);
+  }
+  .test-avatar.initials span {
+    font-family: var(--serif); font-size: 0.86rem; font-weight: 500;
+    letter-spacing: 0.04em; color: var(--sage-deep);
+  }
   .test-role { font-size: 0.84rem; color: var(--text-faint); line-height: 1.35; }
   .test-role b { display: block; color: var(--text); font-weight: 500; font-size: 0.9rem; }
   @media (max-width: 52rem) { .tests { grid-template-columns: 1fr; } }
@@ -1122,7 +1130,7 @@
         <span class="glyph" aria-hidden="true">&ldquo;</span>
         <blockquote>&ldquo;She offered a space where I could speak freely, work through the real problem and hear honest feedback. I left every session with something I could act on.&rdquo;</blockquote>
         <div class="test-by">
-          <div class="test-avatar"><img src="img/session.jpg" alt=""></div>
+          <div class="test-avatar initials"><span>SD</span></div>
           <div class="test-role"><b>Senior Director</b>Global professional services</div>
         </div>
       </div>
@@ -1130,7 +1138,7 @@
         <span class="glyph" aria-hidden="true">&ldquo;</span>
         <blockquote>&ldquo;I came in thinking the problem was the business. Six sessions later I understood it was how I was leading it. That shift changed everything.&rdquo;</blockquote>
         <div class="test-by">
-          <div class="test-avatar"><img src="img/moodboard.jpg" alt=""></div>
+          <div class="test-avatar initials"><span>F</span></div>
           <div class="test-role"><b>Founder</b>Technology</div>
         </div>
       </div>
@@ -1138,7 +1146,7 @@
         <span class="glyph" aria-hidden="true">&ldquo;</span>
         <blockquote>&ldquo;Megha does not hand you answers. She asks the question you have been avoiding, and then she waits.&rdquo;</blockquote>
         <div class="test-by">
-          <div class="test-avatar"><img src="img/formal.jpg" alt=""></div>
+          <div class="test-avatar initials"><span>CP</span></div>
           <div class="test-role"><b>Chief People Officer</b>Regional group</div>
         </div>
       </div>
