@@ -1,5 +1,5 @@
 <title>WithinWorks Leadership</title>
-<link rel="icon" type="image/png" href="img/favicon.png?v=13">
+<link rel="icon" type="image/png" href="img/favicon.png?v=15">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Jost:wght@300;400;500&display=swap">
@@ -474,15 +474,19 @@
   @media (max-width: 52rem) { .qband { grid-template-columns: 1fr; } .qband-copy { padding: 2.5rem 1.5rem; } }
 
   /* ---------- about ---------- */
-  .about { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; }
+  .about-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0;
+  }
 
   .portrait {
     position: relative;
     margin: 0;
-    border-radius: 6px;
-    overflow: hidden;
     aspect-ratio: 1433 / 1800;
-    box-shadow: 0 30px 70px rgba(61, 58, 53, 0.18), 0 6px 18px rgba(61, 58, 53, 0.08);
+    overflow: hidden;
+    align-self: stretch;
   }
   .portrait > img:first-child { width: 100%; height: 100%; object-fit: cover; display: block; }
 
@@ -496,10 +500,10 @@
   }
 
   .hi {
-    position: absolute; top: 4.5%; left: 0; right: 0;
+    position: absolute; top: 5%; left: 0; right: 0;
     text-align: center;
     font-family: var(--serif);
-    font-size: clamp(1.1rem, 1.9vw, 1.5rem);
+    font-size: clamp(1.1rem, 1.5vw, 1.6rem);
     color: var(--text);
     margin: 0;
     line-height: 1.1;
@@ -508,7 +512,7 @@
     display: block;
     font-family: var(--script);
     font-style: normal;
-    font-size: clamp(2rem, 3.6vw, 2.9rem);
+    font-size: clamp(2.1rem, 3vw, 3.2rem);
     color: var(--clay-deep);
     line-height: 1;
     margin-top: 0.1em;
@@ -521,50 +525,49 @@
     gap: 0.3rem;
     font-family: var(--sans);
     font-weight: 400;
-    font-size: clamp(0.7rem, 0.98vw, 0.82rem);
+    font-size: clamp(0.72rem, 0.88vw, 0.95rem);
     line-height: 1.4;
     color: var(--text);
     letter-spacing: 0.012em;
   }
   .pnote svg {
-    width: clamp(38px, 4.4vw, 54px); height: auto;
+    width: clamp(40px, 3.6vw, 62px); height: auto;
     stroke: var(--clay); stroke-width: 2; fill: none;
     stroke-linecap: round; stroke-linejoin: round;
   }
   /* kept to the pale studio background, clear of her jacket */
-  .p1 { top: 17%; left: 3%; width: 32%; }
+  .p1 { top: 17%; left: 4%; width: 31%; }
   .p1 svg { align-self: flex-end; }
-  .p2 { top: 20%; right: 2.5%; width: 29%; text-align: right; align-items: flex-end; }
-  .p3 { bottom: 34%; right: 2.5%; width: 22%; text-align: right; align-items: flex-end; }
-  .p4 { bottom: 5%; left: 3%; width: 25%; }
+  .p2 { top: 20%; right: 3.5%; width: 28%; text-align: right; align-items: flex-end; }
+  .p3 { bottom: 25%; right: 3.5%; width: 24%; text-align: right; align-items: flex-end; }
+  .p4 { bottom: 6%; left: 4%; width: 25%; }
   .p4 svg { align-self: flex-end; }
 
-  .badge {
-    position: absolute;
-    right: 4%; bottom: 4%;
-    width: clamp(52px, 7.5vw, 86px);
-    height: auto;
-    filter: drop-shadow(0 6px 16px rgba(61, 58, 53, 0.22));
+  .about-copy {
+    padding: 4rem clamp(1.5rem, 5vw, 5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   @media (max-width: 62rem) {
-    .about { grid-template-columns: 1fr; gap: 2.5rem; }
-    .portrait { max-width: 34rem; }
+    .about-split { grid-template-columns: 1fr; }
+    .about-copy { padding: 3rem 1.5rem 4rem; }
   }
   @media (max-width: 34rem) {
-    .pnote { font-size: 0.64rem; }
-    .pnote svg { width: 30px; }
+    .pnote { font-size: 0.66rem; }
+    .pnote svg { width: 32px; }
   }
 
-  .about-prose p { color: var(--text-light); margin: 0 0 1rem; }
-  .about-prose .bio-personal {
+  .about-copy p { color: var(--text-light); margin: 0 0 1rem; }
+  .about-copy .bio-personal {
     margin-top: 1.6rem;
     padding-top: 1.4rem;
     border-top: 1px solid var(--rule);
     font-size: 0.94rem;
     color: var(--text-faint);
   }
-  .about-prose h2 { margin-bottom: 1.2rem; }
+  .about-copy h2 { margin-bottom: 1.2rem; }
 
   .sign {
     display: flex;
@@ -915,7 +918,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="shell hero-grid">
-    <div class="hero-photo"><img src="img/hero.jpg?v=13" alt="Megha Bhalla, executive and transformational coach"></div>
+    <div class="hero-photo"><img src="img/hero.jpg?v=15" alt="Megha Bhalla, executive and transformational coach"></div>
     <div>
       <p class="eyebrow">Executive &amp; transformational coaching</p>
       <h1>Transformation happens from the <span class="lean marked">inside out<svg viewBox="0 0 200 12" aria-hidden="true" preserveAspectRatio="none"><path d="M3 8.5C38 3.2 92 2.4 142 5.1c18 1 38 2.4 55 4.2"/></svg></span>.</h1>
@@ -941,11 +944,11 @@
   <div class="shell">
     <p class="proof-label">A career built across</p>
     <div class="proof-row rise">
-      <img src="img/logos/traveazy.png?v=13" alt="Traveazy Group" data-knockout>
-      <img src="img/logos/holidayme.png?v=13" alt="Holidayme">
-      <img src="img/logos/umrahme.png?v=13" alt="Umrahme">
-      <img src="img/logos/barclays.svg?v=13" alt="Barclays">
-      <img src="img/logos/citibank.svg?v=13" alt="Citibank">
+      <img src="img/logos/traveazy.png?v=15" alt="Traveazy Group" data-knockout>
+      <img src="img/logos/holidayme.png?v=15" alt="Holidayme">
+      <img src="img/logos/umrahme.png?v=15" alt="Umrahme">
+      <img src="img/logos/barclays.svg?v=15" alt="Barclays">
+      <img src="img/logos/citibank.svg?v=15" alt="Citibank">
     </div>
   </div>
 </div>
@@ -1035,7 +1038,7 @@
 
 <!-- QUOTE BAND -->
 <div class="qband band-dark">
-  <img src="img/band.jpg?v=13" alt="Megha Bhalla in her workspace">
+  <img src="img/band.jpg?v=15" alt="Megha Bhalla in her workspace">
   <div class="qband-copy">
     <p class="eyebrow">The approach</p>
     <span class="glyph" aria-hidden="true">&ldquo;</span>
@@ -1082,12 +1085,9 @@
 </section>
 
 <!-- ABOUT -->
-<section class="band-tint" id="about">
-  <div class="shell about">
-
-    <div class="about-visual rise">
+<section class="band-tint about-split" id="about">
       <figure class="portrait">
-        <img src="img/about.jpg?v=13" alt="Megha Bhalla, executive and transformational coach">
+        <img src="img/about.jpg?v=15" alt="Megha Bhalla, executive and transformational coach">
         <span class="wash" aria-hidden="true"></span>
 
         <p class="hi">Hi, I&rsquo;m <em>Megha</em></p>
@@ -1112,9 +1112,7 @@
           <svg viewBox="0 0 70 34" aria-hidden="true"><path d="M3 29c22-1 42-9 60-24"/><path d="M53 7l12 2-3 12"/></svg>
         </div>
       </figure>
-    </div>
-
-    <div class="about-prose rise">
+    <div class="about-copy rise">
       <p class="eyebrow">About</p>
       <h2>I have stood on <span class="lean">both sides</span> of this</h2>
 
@@ -1127,8 +1125,6 @@
       <p class="bio-personal">Outside the room: two daughters, 21 and 16, an unreasonable love of dogs, 45 countries and counting, and a yoga and meditation practice I have kept for a long time. The groundedness is not a technique I learned for the work.</p>
 
     </div>
-
-  </div>
 </section>
 
 <!-- TESTIMONIALS -->
@@ -1270,7 +1266,7 @@
         <a class="btn btn-mocha" href="#">Download the brochure</a>
       </div>
     </div>
-    <div class="cta-photo"><img src="img/online.jpg?v=13" alt="An online coaching session"></div>
+    <div class="cta-photo"><img src="img/online.jpg?v=15" alt="An online coaching session"></div>
   </div>
 </section>
 
