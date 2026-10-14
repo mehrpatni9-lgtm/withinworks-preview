@@ -621,15 +621,16 @@ section { padding-block: 3.5rem; }
 }
 /* "Outside the room": text on a soft glow, no box, kept left so Megha's face shows */
 .reveal-quote { margin: 0 auto; width: 100%; position: relative; isolation: isolate; }
-.reveal-quote::before {
-  content: "";
-  position: absolute; z-index: -1;
-  left: -6rem; top: 50%; transform: translateY(-50%);
-  width: min(44rem, 100%); height: 170%;
-  background: radial-gradient(ellipse at 38% 50%,
-    rgba(var(--wash-rgb), .9) 0%, rgba(var(--wash-rgb), .7) 38%, rgba(var(--wash-rgb), 0) 70%);
-  pointer-events: none;
+.reveal-quote::before { content: none; }
+/* soft light from the left, faded at top and bottom so it has no visible edge */
+.reveal { position: relative; }
+.reveal::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(to right, rgba(var(--wash-rgb), .82) 0%, rgba(var(--wash-rgb), .6) 30%, rgba(var(--wash-rgb), 0) 62%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 78%, transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 78%, transparent 100%);
 }
+.reveal > * { position: relative; z-index: 1; }
 .reveal-quote p:last-child {
   margin: 0.5rem 0 0; max-width: 26rem;
   font-family: var(--serif); font-style: italic;
@@ -648,7 +649,7 @@ section { padding-block: 3.5rem; }
 @media (hover: none), (max-width: 48rem) {
   .reveal-wrap::before { background-attachment: scroll; background-position: center 38%; }
   .reveal { min-height: clamp(10rem, 24vh, 15rem); padding-block: 2rem; }
-  .reveal-quote::before { left: -2rem; width: 120%; }
+  .reveal::before { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .reveal-wrap::before { background-attachment: scroll; }
@@ -1325,15 +1326,27 @@ img, svg { max-width: 100%; }
   background: var(--surface); color: var(--text-light);
 }
 
-/* Garden photo band on its own (no Writing section under it): show the photo
-   itself, not a wash, with soft fades top and bottom. Phones keep their own
-   layout (photo whole, quote underneath). */
-@media (min-width: 40.01rem) {
-  .reveal-wrap::before { background-attachment: scroll; background-position: center 30%; }
-  .reveal-wrap::after {
-    background: linear-gradient(to bottom,
-      var(--surface) 0%, rgba(var(--surface-rgb), 0) 14%,
-      rgba(var(--surface-rgb), 0) 86%, var(--surface) 100%);
-  }
-  .reveal { min-height: clamp(24rem, 52vh, 34rem); }
+/* ---------- services: one row per offer, facts in boxes ---------- */
+.offers { display: grid; gap: 1rem; }
+.offer {
+  display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start;
+  padding: clamp(1.4rem, 3vw, 2.2rem);
+  background: var(--bg); border: 1px solid var(--rule); border-radius: 3px;
+}
+.offer-tag { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--clay); margin: 0; }
+.offer h3 { font-size: 1.4rem; margin: 0.4rem 0 0.5rem; }
+.offer-desc { color: var(--text-light); margin: 0 0 1rem; max-width: 30rem; }
+.offer-focus { list-style: none; margin: 0 0 1.2rem; padding: 0; display: grid; gap: 0.4rem; font-size: 0.92rem; color: var(--text-light); }
+.offer-focus b { color: var(--text); font-weight: 500; }
+.offer-facts { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; }
+.offer-facts div { background: var(--surface); border-radius: 3px; padding: 0.8rem 0.95rem; }
+.offer-facts dt { font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 0.25rem; }
+.offer-facts dd { margin: 0; font-size: 0.95rem; color: var(--text); line-height: 1.35; }
+.btn-sm { padding: 0.5rem 1.25rem; font-size: 0.84rem; display: inline-block; width: auto; }
+@media (max-width: 48rem) {
+  .offer { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  .offer-main { display: contents; }
+  .offer-facts { margin-bottom: 1.2rem; }
+  .offer .btn-sm { order: 9; align-self: flex-start; }
 }
