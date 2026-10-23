@@ -1488,3 +1488,4 @@ img, svg { max-width: 100%; }
 .numbers { padding-top: 1.5rem; }
 .who-head { margin: 2.6rem 0 1rem; }
 .who-head h3 { font-size: clamp(1.3rem, 2.4vw, 1.6rem); margin: 0; }
+#challenges { padding-top: 0.5rem; }
