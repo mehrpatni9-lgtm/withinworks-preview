@@ -1541,3 +1541,5 @@ img, svg { max-width: 100%; }
 @media (max-width: 34rem) { .blog-index .posts { grid-template-columns: 1fr; } }
 .blog-index .post-card h3 { font-size: 1.12rem; }
 .blog-index .post-card p { font-size: 0.95rem; }
+.hic-split { grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.6fr); }
+.hic-split .hic-diagram { border: 1px solid var(--rule); padding: 1.6rem 1.6rem 1.2rem; }
