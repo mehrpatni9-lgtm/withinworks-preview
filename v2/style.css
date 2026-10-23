@@ -1504,3 +1504,10 @@ img, svg { max-width: 100%; }
   .sf-list li { font-size: 0.9rem; color: var(--text-light); line-height: 1.45; }
   .sf-list b { display: block; font-family: var(--serif); font-weight: 500; color: var(--text); font-size: 1rem; }
 }
+/* hero fits one screen: text left, diagram boxed right */
+.hic-hero { padding-block: 2.2rem 2.5rem; }
+.hic-split { display: grid; grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.5fr); gap: 2.5rem; align-items: center; }
+.hic-split .hic-intro h1 { font-size: clamp(2.1rem, 4vw, 3rem); }
+.hic-split .hic-diagram { margin: 0; background: var(--surface); border-radius: 18px; padding: 1.2rem 1.4rem 0.6rem; }
+.hic-split .sf-list { grid-column: 1 / -1; }
+@media (max-width: 860px) { .hic-split { grid-template-columns: 1fr; gap: 1.5rem; } }
