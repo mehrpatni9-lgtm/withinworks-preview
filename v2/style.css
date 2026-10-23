@@ -1600,3 +1600,4 @@ img, svg { max-width: 100%; }
   .numbers .stat { padding: 0.1rem 0.9rem; }
   .numbers .stat-n { font-size: 1.5rem; }
 }
+.numbers { padding-block: 2rem 2.2rem; }
