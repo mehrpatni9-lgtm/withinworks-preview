@@ -1492,3 +1492,15 @@ img, svg { max-width: 100%; }
 .qband-cta { margin: 1.6rem 0 0; }
 .qband-cta .btn-outline { border-color: var(--on-dark); color: var(--on-dark); }
 .qband-cta .btn-outline:hover { background: var(--on-dark); color: var(--forest); }
+
+/* How I coach hero: sink-or-float path (2026-10-23) */
+.hic-intro { max-width: 38rem; }
+.hic-diagram { margin-top: 1.5rem; }
+.dia .faint { fill: var(--text-faint); }
+.sf-list { display: none; }
+@media (max-width: 640px) {
+  .dia .sf-sub { display: none; }
+  .sf-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem 1.2rem; list-style: none; padding: 0; margin: 1rem 0 0; }
+  .sf-list li { font-size: 0.9rem; color: var(--text-light); line-height: 1.45; }
+  .sf-list b { display: block; font-family: var(--serif); font-weight: 500; color: var(--text); font-size: 1rem; }
+}
