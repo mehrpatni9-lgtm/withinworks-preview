@@ -1489,3 +1489,6 @@ img, svg { max-width: 100%; }
 .who-head { margin: 2.6rem 0 1rem; }
 .who-head h3 { font-size: clamp(1.3rem, 2.4vw, 1.6rem); margin: 0; }
 #challenges { padding-top: 0.5rem; }
+.qband-cta { margin: 1.6rem 0 0; }
+.qband-cta .btn-outline { border-color: var(--on-dark); color: var(--on-dark); }
+.qband-cta .btn-outline:hover { background: var(--on-dark); color: var(--forest); }
