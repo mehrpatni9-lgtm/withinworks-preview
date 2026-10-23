@@ -1511,3 +1511,33 @@ img, svg { max-width: 100%; }
 .hic-split .hic-diagram { margin: 0; background: var(--surface); border-radius: 18px; padding: 1.2rem 1.4rem 0.6rem; }
 .hic-split .sf-list { grid-column: 1 / -1; }
 @media (max-width: 860px) { .hic-split { grid-template-columns: 1fr; gap: 1.5rem; } }
+/* Writing: View all + blog index page (2026-10-23) */
+.posts-all { margin: 1.8rem 0 0; text-align: center; }
+.blog-index { padding-block: 3rem 4rem; }
+.blog-index h1 { font-size: clamp(2rem, 4.5vw, 3rem); margin: 0.4rem 0 0.8rem; max-width: 40rem; }
+.blog-index .lede { color: var(--text-light); margin: 0 0 2rem; max-width: 36rem; }
+.proof-on { background: transparent; border-top: none; }
+/* Phone: the photo stays a band of its own; logos sit on solid ground */
+.reveal-phone { display: none; }
+@media (hover: none), (max-width: 48rem) {
+  .proof-on { background: var(--surface); border-bottom: 1px solid var(--rule); }
+  .reveal-phone { display: grid; }
+}
+/* Phone polish (2026-10-23) */
+@media (max-width: 48rem) {
+  .numbers .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
+  .numbers .stat { padding: 0.9rem 0.4rem; }
+  .numbers .stat-n { font-size: 1.6rem; }
+  .numbers .stat-l { font-size: 0.78rem; }
+  .reveal-wrap::before, .reveal-wrap::after { display: none; }
+  .reveal-phone { background: url("assets/photos/parallax.jpg") center 38% / cover no-repeat; min-height: 16rem; }
+  .writing-on .post-card { background: var(--bg); backdrop-filter: none; }
+  .hic-diagram .dia text.serif { font-size: 30px; }
+  .hic-diagram .dia text.script { font-size: 32px; }
+}
+.blog-index .posts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); overflow: visible; scroll-snap-type: none; margin: 0; padding: 0; }
+.blog-index .post-card { width: auto; min-width: 0; }
+@media (max-width: 52rem) { .blog-index .posts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 34rem) { .blog-index .posts { grid-template-columns: 1fr; } }
+.blog-index .post-card h3 { font-size: 1.12rem; }
+.blog-index .post-card p { font-size: 0.95rem; }
