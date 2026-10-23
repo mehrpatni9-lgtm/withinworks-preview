@@ -1442,44 +1442,19 @@ img, svg { max-width: 100%; }
 @media (max-width: 860px) { .challenge-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .challenge-grid { grid-template-columns: 1fr; } }
 
-/* ---------- How I coach page (2026-10-23) ---------- */
-.hic-hero { padding-block: 4rem 2rem; }
-.hic-hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 3rem; align-items: center; }
+/* ---------- How I coach page (simplified 2026-10-23) ---------- */
+.hic-hero { padding-block: 3.5rem 3rem; }
+.hic-hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; }
 .hic-hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); margin: 0 0 1rem; }
-.hic-hero p.lede { font-size: 1.12rem; color: var(--text-light); max-width: 34rem; margin: 0; }
-.dia { width: 100%; height: auto; display: block; overflow: visible; }
-.dia text { font-family: var(--sans); fill: var(--text); }
-.dia .serif { font-family: var(--serif); }
-.dia .script { font-family: var(--script); fill: var(--clay-deep); }
-.dia .faint { fill: var(--text-faint); }
-.dia .ink { stroke: var(--sage-deep); fill: none; stroke-linecap: round; stroke-linejoin: round; }
-.dia .clay-ink { stroke: var(--clay); fill: none; stroke-linecap: round; stroke-linejoin: round; }
-.dia .w1 { fill: var(--sage-deep); fill-opacity: 0.9; }
-.dia .w2 { fill: var(--sage); fill-opacity: 0.45; }
-.dia .w3 { fill: var(--clay); fill-opacity: 0.22; }
-.dia .w4 { fill: var(--clay-wash); fill-opacity: 0.55; }
-.dia .on-deep { fill: var(--bg); }
-.dia .petal { fill: var(--clay); fill-opacity: 0.18; stroke: var(--clay); stroke-width: 1.2; }
-.dia .petal.alt { fill: var(--sage); fill-opacity: 0.22; stroke: var(--sage-deep); }
-.dia .node { fill: var(--bg); stroke: var(--sage-deep); stroke-width: 1.5; }
-.dia .node-fill { fill: var(--surface-sage); }
-.hic-belief { display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: start; max-width: 46rem; }
-.hic-belief .glyph-big { font-family: var(--serif); font-size: 5rem; line-height: 0.8; color: var(--clay); }
-.hic-belief p { font-family: var(--serif); font-size: clamp(1.25rem, 2.6vw, 1.6rem); line-height: 1.45; margin: 0; color: var(--text); }
-.hic-belief .script-note { font-family: var(--script); font-size: 1.35rem; color: var(--clay-deep); margin-top: 0.8rem; display: block; }
-.flower-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 2.5rem; align-items: center; }
-.keyed { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem 1.5rem; }
-.keyed li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.6rem; }
-.keyed .k { width: 2rem; height: 2rem; border-radius: 50%; border: 1.2px solid var(--clay); color: var(--clay-deep); font-family: var(--serif); display: grid; place-items: center; font-size: 0.95rem; }
-.keyed h3 { font-size: 1.02rem; margin: 0.15rem 0 0.2rem; }
-.keyed p { margin: 0; font-size: 0.9rem; color: var(--text-light); }
-.cycle-wrap { max-width: 40rem; margin: 0 auto; }
-.stage-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
-.stage { border-top: 2px solid var(--sage); padding-top: 0.8rem; }
-.stage h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
-.stage p { margin: 0; font-size: 0.9rem; color: var(--text-light); }
-.pyr-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 2.5rem; align-items: center; }
-.pyr-grid .head { margin: 0; }
+.hic-hero .lede { font-size: 1.12rem; color: var(--text-light); max-width: 32rem; margin: 0 0 1.6rem; }
+.hic-photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; border-radius: 18px; display: block; }
+.journey { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; position: relative; }
+.journey::before { content: ""; position: absolute; top: 1.4rem; left: 12.5%; right: 12.5%; border-top: 1.5px dashed var(--clay); }
+.journey li { text-align: center; position: relative; }
+.j-dot { width: 2.8rem; height: 2.8rem; margin: 0 auto 0.9rem; border-radius: 50%; display: grid; place-items: center; background: var(--surface); border: 1.5px solid var(--sage-deep); font-family: var(--serif); font-size: 1.1rem; color: var(--sage-deep); position: relative; }
+.journey h3 { font-size: 1.2rem; margin-bottom: 0.3rem; }
+.journey p { margin: 0 auto; font-size: 0.93rem; color: var(--text-light); max-width: 13rem; }
+.journey-note { text-align: center; font-family: var(--script); font-size: 1.45rem; color: var(--clay-deep); margin: 2rem 0 0; }
 .together { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .together div { padding: 0.4rem 1.4rem; border-left: 1px solid var(--rule); display: flex; flex-direction: column; gap: 0.5rem; }
 .together div:first-child { border-left: none; padding-left: 0; }
@@ -1487,12 +1462,18 @@ img, svg { max-width: 100%; }
 .together b { font-family: var(--serif); font-weight: 500; font-size: 1.15rem; color: var(--text); }
 .together span { font-size: 0.9rem; color: var(--text-light); }
 @media (max-width: 860px) {
-  .hic-hero-grid, .flower-grid, .pyr-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .stage-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hic-hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .journey { grid-template-columns: 1fr; gap: 1.4rem; }
+  .journey::before { top: 1.4rem; bottom: 1.4rem; left: 1.4rem; right: auto; border-top: none; border-left: 1.5px dashed var(--clay); }
+  .journey li { text-align: left; display: grid; grid-template-columns: 2.8rem 1fr; column-gap: 1rem; }
+  .j-dot { margin: 0; grid-row: span 2; }
+  .journey p { margin: 0; max-width: none; }
   .together { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 1.5rem; }
   .together div:nth-child(3) { border-left: none; padding-left: 0; }
 }
-@media (max-width: 520px) {
-  .keyed { grid-template-columns: 1fr; }
-  .hic-belief { grid-template-columns: 1fr; gap: 0.5rem; }
-}
+
+/* Outside the room, centred on the About background (2026-10-23) */
+.outside { padding-block: 0.5rem 2.5rem; }
+.outside-in { margin: 0 auto; text-align: center; max-width: 36rem; }
+.outside-in p:last-child { margin: 0.5rem auto 0; font-family: var(--serif); font-style: italic; font-size: clamp(1.1rem, 2.4vw, 1.35rem); line-height: 1.55; color: var(--text); }
+.numbers { padding-top: 1.5rem; }
