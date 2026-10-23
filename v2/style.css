@@ -1575,3 +1575,28 @@ img, svg { max-width: 100%; }
 .blog-index .blog-cta .shell { max-width: 42rem; }
 .blog-index .shell { max-width: 56rem; }
 .feature-post::after { top: 0.6rem; font-size: 9rem; }
+/* Experience + career logos as one compact block (2026-10-23) */
+.numbers { padding-block: 2.5rem 3rem; }
+.exp-split { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 3.5rem; align-items: center; }
+.exp-left .head { margin-bottom: 1.4rem; }
+.exp-left .head p { font-size: 0.95rem; }
+.numbers .stats { display: flex; gap: 0; }
+.numbers .stat { background: none; border: none; border-left: 1px solid var(--rule); border-radius: 0; padding: 0.1rem 1.6rem; text-align: left; }
+.numbers .stat:first-child { border-left: none; padding-left: 0; }
+.numbers .stat-n { font-size: 1.85rem; font-weight: 500; }
+.numbers .stat-l { font-size: 0.78rem; margin-top: 0.2rem; font-style: normal; }
+.exp-right { border-left: 1px solid var(--rule); padding-left: 2.5rem; }
+.exp-right .proof-label { text-align: left; margin-bottom: 1.2rem; }
+.exp-logos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem 1.8rem; align-items: center; }
+.exp-logos img { height: 20px; width: auto; max-width: 100%; justify-self: start; }
+.exp-logos img[alt="Traveazy Group"] { height: 34px; }
+.exp-logos img[data-knockout] { filter: invert(1) brightness(0.32); opacity: 0.85; }
+@media (max-width: 860px) {
+  .exp-split { grid-template-columns: 1fr; gap: 2rem; }
+  .exp-right { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 1.6rem; }
+}
+@media (max-width: 48rem) {
+  .numbers .stats { display: flex; }
+  .numbers .stat { padding: 0.1rem 0.9rem; }
+  .numbers .stat-n { font-size: 1.5rem; }
+}
